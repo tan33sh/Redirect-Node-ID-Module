@@ -1,0 +1,6 @@
+name: Redirect Node ID
+type: module
+description: 'Redirects the user to the entered Node ID page'
+package: Development
+core: 8.x
+configure: redirect_node_id.form

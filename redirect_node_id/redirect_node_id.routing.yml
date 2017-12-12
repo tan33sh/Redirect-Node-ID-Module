@@ -1,0 +1,12 @@
+redirect_node_id.generate:
+  path: '/node/{id}'
+  requirements:
+    _permission: 'redirect node id'
+
+redirect_node_id.form:
+  path: '/admin/config/development/redirect_node_id'
+  defaults:
+    _form: 'Drupal\redirect_node_id\Form\RedirectNodeIDForm'
+    _title: 'redirect node id settings'
+  requirements:
+    _permission: 'administer site configuration'

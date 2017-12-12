@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for Redirect Node ID.
+ */
+
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function redirect_node_id_install() {
+  user_role_change_permissions(RoleInterface::ANONYMOUS_ID, array(
+    'redirect node id' => TRUE,
+  ));
+}
+

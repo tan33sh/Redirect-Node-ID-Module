@@ -1,0 +1,18 @@
+redirect_node_id.settings:
+  type: config_object
+  label: 'Redirect Node ID settings'
+  mapping:
+    redirect_node_id:
+      type: mapping
+      mapping:
+        page_title:
+          type: text
+          label: 'Redirect Node ID page title:'
+        source_text:
+          type: text
+          label: 'Source text for redirect node id:'
+block.settings.redirect_node_id_block:
+  type: block_settings
+  label: 'redirect node id block'
+  mapping:
+    redirect_node_id_block_settings:

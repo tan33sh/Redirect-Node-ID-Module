@@ -1,0 +1,41 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function redirect_node_id_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.redirect_node_id':
+      return t('
+        <h2>Redirects to Node ID Module for Drupal.</h2>
+        <h3>Instructions</h3>
+        <p>Unpack in the <em>modules</em> folder (currently in the root of your Drupal 8 installation) and enable in <strong>/admin/modules</strong>.</p>
+        <p>Then, visit <strong>/admin/config/development/loremipsum</strong> and enter the Node ID of the page which you want to view.</p>
+        <p>Last, visit <strong>www.example.com/node/ID</strong> where:</p>
+        <ul>
+          <li><em>ID</em> is the node ID.</li>
+        </ul>
+        <p>There is also a Redirect Node ID block in which you can choose enter the Node ID and it\'ll do the rest.</p>
+        <p>If you need, there\'s also a specific <em>Redirect Node ID</em> permission.</p>
+        <h3>Attention</h3>
+        <p>Most bugs have been ironed out, holes covered, features added. But this module is a work in progress. Please report bugs and suggestions, ok?</p>
+      ');
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function redirect_node_id_theme($existing, $type, $theme, $path) {
+  $variables = array(
+    'redirect_node_id' => array(
+      'variables' => array(
+        'source_text' => NULL,
+      ),
+      'template' => 'redirect_node_id',
+    ),
+  );
+  return $variables;
+}

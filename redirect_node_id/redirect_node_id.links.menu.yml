@@ -1,0 +1,5 @@
+redirect_node_id.form:
+  title: 'redirect node id settings'
+  description: 'Configure settings for the Redirect Node ID module.'
+  route_name: redirect_node_id.form
+  parent: 'system.admin_config_development'
